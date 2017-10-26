@@ -1,0 +1,29 @@
+
+
+/*
+*
+*   Stylesheet for Lastminute page container
+*
+*/
+
+
+body {
+    
+    font-family: helvetica,arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: #fff;
+    height: 100%;
+    color:#555;
+}
+
+.page {
+    
+    max-width:1360px;
+    margin:0 auto;
+    padding:25px;
+    
+}
+
+
+

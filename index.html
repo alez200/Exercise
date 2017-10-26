@@ -3,86 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href=""/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="asset/css/style.css"/>
+    <link rel="stylesheet" href="asset/css/parking.css"/>
     <script src=""></script>
     <title>Exercise | Lastminute.com</title>
 </head>
 
 <body>
     
-    <section class="parking">
+    <div class="page">
         
-        <div class="parking-header">
-            <h1>Prenota il tuo parcheggio a Milano malpensa</h1>
+        <section class="parking">
 
-        </div>
-
-        <div class="parking-slots">
-            <form>
-                <div class="parking-slots-single">
-                    <input type="radio" name="parkingslots" id="parkingslots-123" value="123"/><label for="parkingslots-123" >P2</label>
-                    <div class="parking-slots-single-info">
-
-                        "indoor": false,
-                        "insurance": false,
-                        "price": "13.56 EUR"
-
-
+            <h1 class="parking__header">Prenota il tuo parcheggio a Milano malpensa</h1>
+            
+                        <div class="parking__slots">
+                <form>
+                    <div class="parking__slot">
+                        <label for="parkingslots-123" >
+                        <input type="radio" name="parkingslots" id="parkingslots-123" value="123"/>
+                        <p class="parking__slotname">P2</p>
+                        <p class="parking__price"><strong>13.56 EUR</strong></p>  
+                        <p class="parking_info"> 
+                            <span>Posto auto scoperto</span>
+                            <span>Assicurazione Esclusa</span>
+                        </p>
+                        </label>
                     </div>
+
+                    <div class="parking__slot">
+                        <input type="radio" name="parkingslots" id="parkingslots-456" value="456"/><label for="parkingslots-456" >P3</label>
+                        <p class="parking__price"><strong>13.56 EUR</strong></p>  
+                        <p class="parking_info"> 
+                            <span>Posto auto scoperto</span>
+                            <span>Assicurazione Esclusa</span>
+                        </p>
+                    </div>
+
+                    <div class="parking__slot">
+                        <input type="radio" name="parkingslots" id="parkingslots-243" value="243"/><label for="parkingslots-243" >P4</label>
+                        <p class="parking__price"><strong>13.56 EUR</strong></p>  
+                        <p class="parking_info"> 
+                            <span>Posto auto scoperto</span>
+                            <span>Assicurazione Esclusa</span>
+                        </p>
+                    </div>
+
+                    <div class="parking__slot">
+                        <input type="radio" name="parkingslots" id="parkingslots-700" value="700"/><label for="parkingslots-700" >P5</label>
+                        <p class="parking__price"><strong>13.56 EUR</strong></p>  
+                        <p class="parking_info"> 
+                            <span>Posto auto scoperto</span>, <span>Assicurazione Esclusa</span>
+                        </p>
+                    </div>
+
+                    <button>Scegli il parcheggio</button>
+                </form>
+            </div>
+
+            <div class="parking__vendor">
+                <p class="parking__labelservices">Sono inclusi i seguenti servizi:</p>
+
+                <div  class="parking__map" >
+                    <img src="http://lorempixel.com/370/390" alt="mappa dei parcheggi di Milano Malpensa"/>
                 </div>
 
-                <div class="parking-slots-single">
-                    <input type="radio" name="parkingslots" id="parkingslots-456" value="456"/><label for="parkingslots-456" >P3</label>
-                    <div class="parking-slots-single-info">
+                <ul class="parking__services">
+                    <li>Parcheggio ParkinGo della tipologia selezionata</li>
+                    <li>Navetta da/per aeroporto 24h</li>
+                    <li>Vigilanza e custodia del mezzo 24h</li>
+                    <li>Ripristino gratuito del calo di batteria della tua auto</li>
+                </ul>
+            </div>
 
-                        "indoor": false,
-                        "insurance": true,
-                        "price": "18.99 EUR"
+            <div class="parking__vendoropener">
+                <a href=""><span>Chiudi i dettagli</span></a>
+            </div>
 
-                    </div>
-                </div>
 
-                <div class="parking-slots-single">
-                    <input type="radio" name="parkingslots" id="parkingslots-243" value="243"/><label for="parkingslots-243" >P4</label>
-                    <div class="parking-slots-single-info">
 
-                        "indoor": true,
-                        "insurance": true,
-                        "price": "23.56 EUR
-
-                    </div>
-                </div>
-
-                <div class="parking-slots-single">
-                    <input type="radio" name="parkingslots" id="parkingslots-700" value="700"/><label for="parkingslots-700" >P5</label>
-                    <div class="parking-slots-single-info">
-
-                        "indoor": true,
-                        "insurance": false,
-                        "price": "16.49 EUR"
-
-                    </div>
-                </div>
-
-                <button>Scegli il parcheggio</button>
-            </form>
-        </div>
-
-        <div class="parking-vendor">
-            <ul>
-                <li>Parcheggio ParkinGo della tipologia selezionata</li>
-                <li>Navetta da/per aeroporto 24h</li>
-                <li>Vigilanza e custodia del mezzo 24h</li>
-                <li>Ripristino gratuito del calo di batteria della tua auto</li>
-            </ul>
-        </div>
-
-        <div class="parking-opener">
-            <a href=""><span>Chiudi i dettagli</span></a>
-        </div>
+        </section>
         
+    </div>
 
-    </section>
-    
 </body>
 </html>

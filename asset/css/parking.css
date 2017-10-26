@@ -1,0 +1,224 @@
+
+
+/*
+*
+*   Stylesheet for Lastminute parking widget exercise
+*
+*/
+
+/*
+*
+*Import fontello for icon
+*
+*/
+
+@import 'fontello.css';
+
+.parking {
+
+    width:100%;
+    float:left;
+    box-sizing: border-box;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(179,179,179,1);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(179,179,179,1);
+    box-shadow: 0px 0px 10px 3px rgba(179,179,179,0.5);
+    padding:15px;
+    
+}
+
+    .parking__header {
+
+        font-size:15px;
+        font-weight:300;
+        margin:0 0 20px;
+        padding: 70px 0 0;
+        background: url(../img/vendor_logo.png) no-repeat top center;
+        background-size: auto 60px;
+        text-align: center;
+        
+    }
+
+    .parking__vendor {
+
+        margin:0 0 15px;
+        padding:0 0 15px;
+        width:100%;
+        float:left;
+        border-bottom:1px solid #ccc;
+
+    }
+
+        .parking__labelservices {
+
+            margin: 0 0 10px;
+
+        }
+
+        .parking__map {
+
+            float:left;
+            width:100%;
+            margin:0 0 15px;
+
+        }
+
+            .parking__map img {
+
+                max-width: 100%;
+
+            }
+
+
+        .parking__services {
+
+            clear: both;
+            margin:0;
+            padding:0;
+
+        }
+
+            .parking__services li {
+
+                list-style-type:none;
+                padding-left: 20px;
+                position: relative;
+                margin-bottom: 10px;
+
+            }
+
+                .parking__services li:before {
+
+                    content: '\e800';
+                    font-family: "fontello";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: #8b0;
+
+                }
+
+
+    .parking__vendoropener {
+        
+        text-align: right;
+        margin:0 0 15px
+
+    }
+        .parking__vendoropener a {
+
+            color: #fa4b16;
+            cursor: pointer;
+            text-decoration: none;
+
+        }
+
+        .parking__vendoropener a:hover {
+
+            text-decoration: underline;
+
+        }
+
+    .parking__slots {
+        
+        float:left;
+        width: 100%;
+        margin:10px 0;
+        
+    }
+
+        .parking__slot {
+
+            float:left;
+            width: 100%;
+            box-sizing: border-box;
+            margin:0 0 10px;
+            padding:5px 5px 5px 25px;
+            position:relative;
+
+        }
+
+        .parking__slot:hover {
+
+            background: #f0f0f0;
+            cursor:pointer;
+
+        }
+
+            .parking__slot input {
+
+                position:absolute;
+                top:10px;
+                left:5px;
+
+            }
+
+            .parking__slot p {
+
+                margin:0 0 5px;
+                padding:0;
+
+            }
+
+            .parking__slotname {
+
+                font-size:15px;
+                font-weight:600;
+
+            }
+
+            .parking__price {
+
+                font-size:12px;
+                font-weight:600;
+
+            }
+
+            .parking_info {
+
+                font-size:12px;
+                
+            }
+
+
+        .parking__slots button {
+
+            display:none;
+
+        }
+
+
+@media screen and (min-width: 768px) {
+    
+    .parking__header {
+
+        margin:0;
+        padding: 10px 0 20px;
+        background-size: contain;
+        background-position: right center;
+        text-align: left;
+
+    }
+    
+    .parking__map {
+
+        width:370px;
+        margin:0 15px 0 0;
+
+    }
+    
+    .parking__services {
+
+        margin-left:385px;
+        clear: none;
+
+    }
+    
+    .parking__slot {
+
+        width: 25%;
+
+    }
+    
+}
+
