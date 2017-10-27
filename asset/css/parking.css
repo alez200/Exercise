@@ -222,3 +222,58 @@
     
 }
 
+
+
+
+
+
+
+
+.b-el-radio input:not(old) {
+    width: 0;
+    opacity: 0;
+    margin: 0;
+    float: left;
+}
+
+.b-el-radio input:not(old) + label {
+    display: inline-block;
+    margin-left: 0em;
+    line-height: 1.5em;
+}
+
+.b-el-radio label {
+    font-weight: normal;
+    width: 100%;
+}
+
+.b-f-el label, .b-f-el .label {
+    padding: 0 0 5px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+
+
+.b-el-radio input:not(old) + label > span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: .25em .75em .25em .25em;
+    border: 1px solid #dbdbdb;
+    border-radius: 1em;
+    background: #fff;
+    vertical-align: bottom;
+}
+
+.b-circle {
+    float: left;
+}
+.b-el-radio input:not(old):checked + label > span > span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    border-radius: 1em;
+    background: #f98a1a;
+}
