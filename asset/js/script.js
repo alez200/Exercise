@@ -1,21 +1,17 @@
 
 /**
- * Definisco il namespace
+ * Define namespace
  *
  */
 var Lastminute = Lastminute || {};
 
 
 /**
- * Definizione core logic applicazione
+ * Define application core
  *
  */
 Lastminute.core = function () {
 
-    /**
-     * Variabili locali
-     *
-     */
     var core = this;
 
     this.boot = function () {
@@ -24,94 +20,53 @@ Lastminute.core = function () {
 
     };
 
+    // This function initialilize and render the widget in a Wep app page.
+    // The widget is a jquery plugin and use mustache.js to render the layout.
+    // To properly initialize the widget you need to pass the following parameters:
+    // - Airport identification (airportId)
+    // - Server-side service Uri (parkingService)
+    // - Html template path (parkingTemplate)
+    // - Callback function to communicates user's selection (callbackFunction)
+
     this.initParking = function(){
 
-        var params ={
+        $('.parking').ParkingWidget({
 
-            airportId: 1,
-            parkingService  :'http://localhost/exercise/asset/service/model.json',
-            appFunction     : core.cartUpdate,
-            containerWidget :'.parking',
-
-        };
-
-        core.parkingWidget(params);
-
-    };
-
-    this.cartUpdate = function(){
-
-        //alert('rispondo')
-
-    };
-
-    this.parkingWidget = function(params){
-
-        console.log($('body'));
-
-        var parkingParams = params;
-
-        //controll if there is the airport id
-        if (!parkingParams.airportId){
-
-            console.error('ERROR: the airport id is missing');
-            return false;
-
-        }
-
-        //controll if there is parkingService url
-        if (!parkingParams.containerWidget){
-
-            console.error('ERROR: the container widget is missing');
-            return false;
-
-        }
-
-        //controll if there is parkingService url
-        if (!parkingParams.parkingService){
-
-            console.error('ERROR: the url service is missing');
-            return false;
-
-        }
-
-        var serviceParams = {
-
-            airportId: parkingParams.airportId,
-
-        };
-
-        var container = $(parkingParams.containerWidget);
-
-        //call parkingService
-        $.ajax({
-
-            url: parkingParams.parkingService,
-            data: serviceParams,
-            async: true,
-            cache: false,
-            method: "POST",
-            dataType: "json",
-
-            success: function (json) {
-
-                var objForm = jQuery.parseJSON(json);
-                console.log(objForm);
-
-            }
+            airportId        : 1,
+            parkingService   :'asset/service/model.json',
+            parkingTemplate  :'asset/template/parking.html',
+            callbackFunction : core.cartUpdate,
 
         });
 
-        console.log(params);
-        params.appFunction();
-
     };
 
+
+    //This callback function permits the widget communicates with Web app
+    this.cartUpdate = function(params){
+
+        var msg ='';
+
+        var slotSelected = params.slotId;
+
+        if (slotSelected == 0){
+
+            msg = ''
+
+        } else {
+
+            msg = 'Prenotazione parcheggio: '+ params.slotName +' '+params.slotPrice ;
+
+        }
+
+        $('.cart__msg').html(msg);
+
+    };
 
 };
 
 /**
- * Acquisizione istanza classe
+ * class instance acquisition
  *
  */
 Lastminute.core.getInstance = function () {
@@ -137,10 +92,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // istanzio l'applicazione
     var core = Lastminute.core.getInstance();
 
-    // istanzio l'applicazione
-    var core = Lastminute.core.getInstance();
-
-    // inizializzo l'applicazione
+    // init Web app Core application
     core.boot();
 
 });

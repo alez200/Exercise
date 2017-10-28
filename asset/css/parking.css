@@ -2,9 +2,14 @@
 
 /*
 *
+
+
+*
 *   Stylesheet for Lastminute parking widget exercise
 *
 */
+
+
 
 /*
 *
@@ -48,6 +53,12 @@
         border-bottom:1px solid #ccc;
 
     }
+
+        .j__hidden {
+
+            display:none;
+
+        }
 
         .parking__labelservices {
 
@@ -119,6 +130,30 @@
 
         }
 
+        .parking__show {
+
+            display:none;
+
+        }
+
+        .parking__hide {
+
+            display:inline;
+
+        }
+
+        .j__shower .parking__hide{
+
+            display:none;
+
+        }
+
+        .j__shower .parking__show{
+
+            display:inline;
+
+        }
+
     .parking__slots {
         
         float:left;
@@ -133,24 +168,61 @@
             width: 100%;
             box-sizing: border-box;
             margin:0 0 10px;
-            padding:5px 5px 5px 25px;
+            padding:0;
             position:relative;
-
-        }
-
-        .parking__slot:hover {
-
-            background: #f0f0f0;
-            cursor:pointer;
 
         }
 
             .parking__slot input {
 
                 position:absolute;
-                top:10px;
-                left:5px;
+                display: none;
 
+            }
+
+            .parking__slot label {
+
+                padding:5px 5px 5px 30px;
+                cursor:pointer;
+                display:block;
+            }
+
+            .parking__slot label:hover {
+
+                background: #f0f0f0;
+
+            }
+
+            .parking__slot input:checked +  label {
+
+                background: #f0f0f0;
+            }
+
+            .parking__check {
+
+                border-radius:2px;
+                width: 16px;
+                height: 16px;
+                border: 1px solid #8b0;
+                display: inline-block;
+                position: absolute;
+                left: 6px;
+                top: 6px;
+            }
+
+            .parking__slot input:checked +  label > .parking__check {
+
+                background: #8b0;
+            }
+
+            .parking__slot input:checked +  label > .parking__check:before {
+
+                content: '\e800';
+                font-family: "fontello";
+                position: absolute;
+                left: 1px;
+                top: 0;
+                color: #fff;
             }
 
             .parking__slot p {
@@ -216,64 +288,14 @@
     
     .parking__slot {
 
-        width: 25%;
+        width: 50%;
+
+    }
+
+    .parking__slot label {
+
+       margin:0 10px 0 0;
 
     }
     
-}
-
-
-
-
-
-
-
-
-.b-el-radio input:not(old) {
-    width: 0;
-    opacity: 0;
-    margin: 0;
-    float: left;
-}
-
-.b-el-radio input:not(old) + label {
-    display: inline-block;
-    margin-left: 0em;
-    line-height: 1.5em;
-}
-
-.b-el-radio label {
-    font-weight: normal;
-    width: 100%;
-}
-
-.b-f-el label, .b-f-el .label {
-    padding: 0 0 5px;
-    display: inline-block;
-    font-weight: 600;
-}
-
-
-
-.b-el-radio input:not(old) + label > span {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin: .25em .75em .25em .25em;
-    border: 1px solid #dbdbdb;
-    border-radius: 1em;
-    background: #fff;
-    vertical-align: bottom;
-}
-
-.b-circle {
-    float: left;
-}
-.b-el-radio input:not(old):checked + label > span > span {
-    display: block;
-    width: 10px;
-    height: 10px;
-    margin: 2px;
-    border-radius: 1em;
-    background: #f98a1a;
 }

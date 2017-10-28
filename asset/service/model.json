@@ -1,14 +1,14 @@
 {
- "vendor" : {
-   "name": "ParkinGo",
-   "departureAirport": "Bergamo Orio al Serio",
-   "map": "http://lorempixel.com/370/390",
-   "features": [
-    "Parcheggio ParkinGo della tipologia selezionata",
-    "Navetta da/per aeroporto 24h",
-    "Vigilanza e custodia del mezzo 24h",
-    "Ripristino gratuito del calo di batteria della tua auto"
-   ],
+  "vendor": {
+    "name": "ParkinGo",
+    "departureAirport": "Bergamo Orio al Serio",
+    "map": "http://lorempixel.com/370/390",
+    "features": [
+      "Parcheggio ParkinGo della tipologia selezionata",
+      "Navetta da/per aeroporto 24h",
+      "Vigilanza e custodia del mezzo 24h",
+      "Ripristino gratuito del calo di batteria della tua auto"
+    ]
   },
   "parkings": [{
     "id": 123,

@@ -8,89 +8,30 @@
     <link rel="stylesheet" href="asset/css/parking.css"/>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://raw.githack.com/janl/mustache.js/master/mustache.min.js"></script>
+
+    <script src="asset/js/parking.js" type="text/javascript"></script>
     <script src="asset/js/script.js" type="text/javascript"></script>
 
     <title>Exercise | Lastminute.com</title>
 </head>
 
 <body>
-    
+
+
+
+
     <div class="page">
 
-        <section class="parking">
+        <div class="cart">
+            <h1>Shopping cart</h1>
 
-            <h1 class="parking__header">Prenota il tuo parcheggio a Milano malpensa</h1>
-            
-                        <div class="parking__slots">
-                <form>
-                    <div class="parking__slot">
-                        <label for="parkingslots-123" >
+            <div class="cart__msg"></div>
 
-                        <span class="b-circle"><span></span></span>
+        </div>
 
-
-                        <input type="radio" name="parkingslots" id="parkingslots-123" value="123"/>
-                        <p class="parking__slotname">P2</p>
-                        <p class="parking__price"><strong>13.56 EUR</strong></p>  
-                        <p class="parking_info"> 
-                            <span>Posto auto scoperto</span>
-                            <span>Assicurazione Esclusa</span>
-                        </p>
-                        </label>
-                    </div>
-
-                    <div class="parking__slot">
-                        <input type="radio" name="parkingslots" id="parkingslots-456" value="456"/><label for="parkingslots-456" >P3</label>
-                        <p class="parking__price"><strong>13.56 EUR</strong></p>  
-                        <p class="parking_info"> 
-                            <span>Posto auto scoperto</span>
-                            <span>Assicurazione Esclusa</span>
-                        </p>
-                    </div>
-
-                    <div class="parking__slot">
-                        <input type="radio" name="parkingslots" id="parkingslots-243" value="243"/><label for="parkingslots-243" >P4</label>
-                        <p class="parking__price"><strong>13.56 EUR</strong></p>  
-                        <p class="parking_info"> 
-                            <span>Posto auto scoperto</span>
-                            <span>Assicurazione Esclusa</span>
-                        </p>
-                    </div>
-
-                    <div class="parking__slot">
-                        <input type="radio" name="parkingslots" id="parkingslots-700" value="700"/><label for="parkingslots-700" >P5</label>
-                        <p class="parking__price"><strong>13.56 EUR</strong></p>  
-                        <p class="parking_info"> 
-                            <span>Posto auto scoperto</span>, <span>Assicurazione Esclusa</span>
-                        </p>
-                    </div>
-
-                    <button>Scegli il parcheggio</button>
-                </form>
-            </div>
-
-            <div class="parking__vendor">
-                <p class="parking__labelservices">Sono inclusi i seguenti servizi:</p>
-
-                <div  class="parking__map" >
-                    <img src="http://lorempixel.com/370/390" alt="mappa dei parcheggi di Milano Malpensa"/>
-                </div>
-
-                <ul class="parking__services">
-                    <li>Parcheggio ParkinGo della tipologia selezionata</li>
-                    <li>Navetta da/per aeroporto 24h</li>
-                    <li>Vigilanza e custodia del mezzo 24h</li>
-                    <li>Ripristino gratuito del calo di batteria della tua auto</li>
-                </ul>
-            </div>
-
-            <div class="parking__vendoropener">
-                <a href=""><span>Chiudi i dettagli</span></a>
-            </div>
-
-
-
-        </section>
+        <!--Position where have to embed widget -->
+        <section class="parking"></section>
         
     </div>
 

@@ -9,28 +9,7 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Serena sito">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="ftp.alez200.com">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="ftp.alez200.com (1)">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="reactjs">
+      <paths name="alez200">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

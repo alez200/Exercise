@@ -1,10 +1,7 @@
-
-
-/*
-*
-*   Stylesheet for Lastminute page container
-*
-*/
+/**
+ * Stylesheet for Lastminute page container
+ *
+ */
 
 
 body {
@@ -23,6 +20,26 @@ body {
     margin:0 auto;
     padding:25px;
     
+}
+
+.cart {
+
+    width:100%;
+    float:left;
+    box-sizing: border-box;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(179,179,179,1);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(179,179,179,1);
+    box-shadow: 0px 0px 10px 3px rgba(179,179,179,0.5);
+    padding:15px;
+    margin:0 0 20px;
+
+}
+
+.cart h1 {
+
+    font-size:16px;
+
 }
 
 

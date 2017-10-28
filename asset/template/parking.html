@@ -1,0 +1,50 @@
+
+<div class="parking__container" id="parkingtpl">
+
+    <h1 class="parking__header">{{dictionary.bookYourParking}} {{vendor.departureAirport}}</h1>
+
+
+    <div class="parking__slots">
+        <form>
+            {{#parking.slots}}
+
+            <div class="parking__slot">
+                <input type="checkbox" name="parkingslots" id="parkingslots-{{id}}" value="{{id}}" data-name="{{name}}" data-price="{{price}}" data-currency="EUR"/>
+                <label for="parkingslots-{{id}}" >
+                    <span class="parking__check"></span>
+                    <p class="parking__slotname">{{name}}</p>
+                    <p class="parking__price"><strong>{{price}}</strong></p>
+                    <p class="parking_info">
+                        <span>{{indoor}}</span>, <span>{{assurance}}</span>
+                    </p>
+                </label>
+            </div>
+
+            {{/parking.slots}}
+
+        </form>
+    </div>
+
+    <div class="parking__vendor j__hidden">
+        <p class="parking__labelservices">{{dictionary.featuresTitle}}</p>
+
+        <div  class="parking__map" >
+            <img src="{{vendor.map}}" alt="{{vendor.departureAirport}}"/>
+        </div>
+
+        <ul class="parking__services">
+            {{#features.feature}}
+            <li>{{desc}}</li>
+            {{/features.feature}}
+
+        </ul>
+    </div>
+
+    <div class="parking__vendoropener  j__opener">
+        <a href="javascript:void(0)"  class="j__shower" data-target="parking__vendor" >
+            <span class="parking__show">Mostra</span>
+            <span class="parking__hide">Nascondi</span>
+            i dettagli
+        </a>
+    </div>
+</div>
