@@ -4,6 +4,16 @@
  */
 
 
+/*
+*
+*Import fontello for icon
+*
+*/
+
+@import 'fontello.css';
+
+
+
 body {
     
     font-family: helvetica,arial,sans-serif;

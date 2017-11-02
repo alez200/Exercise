@@ -59,7 +59,9 @@ Lastminute.core = function () {
 
         }
 
-        $('.cart__msg').html(msg);
+        var cartMsg =  $('.cart__msg');
+
+        cartMsg.html(msg);
 
     };
 

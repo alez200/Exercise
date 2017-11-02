@@ -1,24 +1,11 @@
+/**
+ * Stylesheet for Lastminute parking widget exercise
+ * Author: alessandro.balza@gmail.com
+ *
+ */
 
 
-/*
-*
-
-
-*
-*   Stylesheet for Lastminute parking widget exercise
-*
-*/
-
-
-
-/*
-*
-*Import fontello for icon
-*
-*/
-
-@import 'fontello.css';
-
+/*Block widget*/
 .parking {
 
     width:100%;
@@ -32,6 +19,7 @@
     
 }
 
+/*Element header widget*/
     .parking__header {
 
         font-size:15px;
@@ -44,6 +32,7 @@
         
     }
 
+/*Element vendor area widget*/
     .parking__vendor {
 
         margin:0 0 15px;
@@ -76,7 +65,7 @@
 
             .parking__map img {
 
-                max-width: 100%;
+                width: 100%;
 
             }
 
@@ -109,7 +98,7 @@
 
                 }
 
-
+/*Element vendor toggler*/
     .parking__vendoropener {
         
         text-align: right;
@@ -154,6 +143,7 @@
 
         }
 
+/*Element list parking slot*/
     .parking__slots {
         
         float:left;
@@ -259,7 +249,7 @@
 
         }
 
-
+/* media query for large device*/
 @media screen and (min-width: 768px) {
     
     .parking__header {

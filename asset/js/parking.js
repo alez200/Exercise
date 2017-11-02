@@ -23,12 +23,14 @@
         //Check if there are all the necessary params
         var ready = controllParams();
 
+        //If all is correct init widget
         if (ready) {
-            //init widget
+
             init(parkingParams);
 
         }
 
+        //This function  there are all the necessary params
         function controllParams (){
 
             var check = true;
@@ -42,7 +44,7 @@
 
             }
 
-            //controll if there is parkingService url
+            //controll parkingService url
             if (!parkingParams.parkingService){
 
                 msgErr = msgErr+'The url service is missing \n';
@@ -50,7 +52,7 @@
 
             }
 
-            //controll if there is widget template
+            //controll widget template
             if (!parkingParams.parkingTemplate){
 
                 msgErr = msgErr+'The widget template is missing \n';
@@ -58,7 +60,7 @@
 
             }
 
-            //controll if there is parkingService url
+            //controll parkingService url
             if (!parkingParams.callbackFunction){
 
                 msgErr = msgErr+'The callbackFunction is missing \n';
@@ -76,6 +78,7 @@
 
         };
 
+        //This function initializes the plugin
         function init(){
 
             //set params for parkingService call
@@ -122,6 +125,7 @@
 
         };
 
+        //This function render the plugin
         function render(objParking){
 
             //set data for template render
@@ -132,20 +136,32 @@
             data['dictionary']=objParking.dictionary;
             data['vendor']=objParking.vendor;
 
+            //set view for Mustache template
             var view = data;
 
-            $(".parking").load( parkingParams.parkingTemplate+" #parkingtpl",function(){
+            var template = parkingParams.parkingTemplate;
+
+            //set container for Mustache template
+            var container = parkingParams.containerWidget;
+
+            //render Mustache template
+            $(container).load( template+" #parkingtpl",function(){
+
                 var template = document.getElementById('parkingtpl').innerHTML;;
                 var output = Mustache.render(template, view);
-                $(".parking").html(output);
+                $(container).html(output);
 
-                //when template is loaded i can call function to manipolate widget
+                //when template is loaded i can init function to manipolate widget
+
                 toggler();
+
                 selectParking();
+
             });
 
         };
 
+        //function to create object content data slot
         function createSlot(objParking){
 
             var parking = {};
@@ -173,6 +189,7 @@
 
         };
 
+        //function to create object content data parking featurs
         function createFeatures(objFeatures){
 
             var featuresList = {};
@@ -197,6 +214,7 @@
         function toggler(){
 
             $(parkingParams.containerWidget).on('click','.j__opener a', function(e){
+
                 e.preventDefault();
 
                 var opener = $(this);
@@ -204,6 +222,7 @@
 
                 $('.'+target).toggleClass('j__hidden');
                 opener.toggleClass('j__shower');
+
             });
 
         };
@@ -211,7 +230,7 @@
         //function to select parking slot
         function selectParking(){
 
-            var form = $('.parking__slots');
+            var form = $('.j__parkingslot');
 
             //set default params for callback function, use those params when no slots are selected
             var callbackParams = {
